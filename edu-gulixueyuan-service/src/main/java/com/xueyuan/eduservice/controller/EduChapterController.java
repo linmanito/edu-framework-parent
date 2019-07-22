@@ -37,6 +37,8 @@ public class EduChapterController {
     @GetMapping("chapterList/{courseId}")
     public R getChapterAllList(@PathVariable String courseId){
 
+        System.out.println("上传github");
+
         List<ChapterDto> chapterList = chapterService.getAllChapterList(courseId);
 
         return R.ok().data("list",chapterList);
